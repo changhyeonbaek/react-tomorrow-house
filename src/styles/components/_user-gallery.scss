@@ -1,0 +1,13 @@
+.user-gallery {
+  margin: 0 -#{$grid-margin};
+  overflow: hidden;
+
+  &-slider {
+    margin-bottom: 4px;
+    position: relative;
+  }
+
+  .product-section-content {
+    margin-top: 40px;
+  }
+}
