@@ -1,0 +1,150 @@
+.global-footer {
+  background-color: $background;
+  margin-bottom: $order-cta-height;
+  padding: 30px 0;
+
+  &-title {
+    @include text-style(18, $dark);
+    font-weight: 700;
+
+    .ic-chevron {
+      display: inline-block;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &-info {
+    @include flexbox(start);
+    margin: 20px 0 8px;
+
+    a {
+      @include text-style(16);
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    p {
+      @include text-style(14, $primary);
+      padding-top: 1px;
+    }
+  }
+
+  &-detail-list {
+    color: $charcoal;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    white-space: pre-wrap;
+  }
+
+  &-detail-item {
+    @include flexbox(start);
+
+    &::before {
+      content: ' · ';
+    }
+
+    dt {
+      &::after {
+        content: ': ';
+      }
+    }
+  }
+
+  &-inquiry {
+    @include flexbox(start);
+    column-gap: 12px;
+    margin-top: 12px;
+
+    button,
+    a {
+      @include text-style(14);
+      align-items: center;
+      border: 1px solid $border;
+      border-radius: 4px;
+      color: $charcoal;
+      margin: 0;
+      padding: 0 8px;
+      width: fit-content;
+    }
+
+    a {
+      @include inline-flexbox(center);
+    }
+  }
+
+  &-divider {
+    background-color: #eaedef;
+    height: 1px;
+    margin: 16px 0;
+  }
+
+  &-link {
+    a {
+      @include text-style(12);
+      display: inline-block;
+      letter-spacing: -0.05em;
+      margin: 8px 12px 8px 0;
+      white-space: nowrap;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+  }
+
+  &-business {
+    .registration {
+      margin-bottom: 12px;
+
+      .button-wrapper {
+        margin-bottom: 12px;
+
+        button {
+          @include flexbox(start);
+          @include text-style(12);
+          color: $charcoal;
+          column-gap: 2px;
+          font-weight: 700;
+        }
+      }
+
+      &-info {
+        @include text-style(12, $thirdly);
+
+        .name,
+        .address,
+        .email,
+        .biz-number,
+        .approval-number {
+          padding: 2px 0;
+        }
+      }
+    }
+
+    .notion {
+      margin-bottom: 12px;
+
+      span {
+        color: $thirdly;
+        font-size: 10px;
+        letter-spacing: -0.05em;
+      }
+    }
+
+    .notion-2 {
+      margin-bottom: 12px;
+
+      span {
+        color: $thirdly;
+        font-size: 10px;
+        letter-spacing: -0.05em;
+      }
+    }
+
+    .copyright {
+      color: $thirdly;
+      font-size: 10px;
+    }
+  }
+}
