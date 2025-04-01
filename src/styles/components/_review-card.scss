@@ -1,0 +1,131 @@
+.review-card {
+  padding: 20px 0;
+
+  &-header {
+    @include flexbox(start);
+    margin-bottom: 20px;
+
+    .avatar-24,
+    .username {
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
+    .avatar-24 {
+      margin: 4px 8px 0 0;
+    }
+
+    .username {
+      @include text-style(13, $dark);
+
+      strong {
+        font-weight: 400;
+      }
+    }
+
+    .detail {
+      @include flexbox(start);
+      @include text-style(13, $secondary);
+
+      .star-rating-16 {
+        margin-right: 5px;
+
+        .rate-wrapper {
+          margin-right: 5px;
+
+          i {
+            margin-right: 2px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+
+        .ic-chevron {
+          @include text-style(13, $blue-aqua);
+          font-weight: 700;
+        }
+      }
+
+      time::after {
+        content: '·';
+      }
+    }
+  }
+
+  &-body {
+    margin-bottom: 20px;
+
+    .review-image {
+      border-radius: 4px;
+      height: 64px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      width: 64px;
+
+      img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    p {
+      @include text-style(15, $dark);
+    }
+  }
+
+  &-footer {
+    @include flexbox(start);
+
+    button {
+      margin-right: 8px;
+      width: 114px;
+
+      i {
+        color: $white;
+        font-size: 15px;
+        margin-left: -4px;
+        margin-right: 4px;
+      }
+    }
+
+    p {
+      @include text-style(12, $dark);
+
+      strong {
+        font-weight: 400;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    padding: 40px 0 40px 32px;
+
+    &-body {
+      .review-image {
+        height: 112px;
+        margin-bottom: 20px;
+        width: 112px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-header {
+      .avatar-24,
+      .username {
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}
