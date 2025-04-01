@@ -1,0 +1,100 @@
+.inquiry-card {
+  padding-bottom: 40px;
+
+  &-header {
+    @include text-style(12);
+    margin-bottom: 8px;
+
+    .detail,
+    .misc {
+      @include flexbox(start);
+
+      dd,
+      strong {
+        &::after {
+          margin: 0 4px;
+          content: '|';
+        }
+      }
+
+      dd:last-child::after {
+        content: none;
+      }
+    }
+
+    .misc {
+      color: $tertiary;
+
+      strong {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &-body {
+    @include text-style(13, $dark);
+
+    .inquiry-content {
+      padding-left: 15px;
+      position: relative;
+
+      &:first-child:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    .seller {
+      @include flexbox(start);
+      margin-bottom: 4px;
+
+      strong {
+        margin-right: 4px;
+      }
+
+      time {
+        @include text-style(12, $tertiary);
+      }
+    }
+
+    span {
+      color: $blue-aqua;
+      font-weight: 700;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    p {
+      @include flexbox(start);
+      color: $primary;
+
+      i {
+        color: $tertiary;
+        font-size: 16px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-header {
+      margin-bottom: 20px;
+    }
+
+    &-body {
+      @include text-style(15, $dark);
+
+      .inquiry-content {
+        padding-left: 24px;
+
+        &:first-child:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .seller {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
