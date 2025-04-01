@@ -1,0 +1,38 @@
+%avatar-base {
+  background-image: url('../../assets/images/img-user-default.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  img[src=''] {
+    display: none;
+  }
+}
+
+.avatar-20 {
+  @extend %avatar-base;
+  height: 20px;
+  width: 20px;
+}
+
+.avatar-24 {
+  @extend %avatar-base;
+  height: 24px;
+  width: 24px;
+}
+
+.avatar-32 {
+  @extend %avatar-base;
+  height: 32px;
+  width: 32px;
+}
