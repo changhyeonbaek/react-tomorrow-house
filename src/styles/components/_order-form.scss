@@ -1,0 +1,90 @@
+.order-form {
+  margin-top: 20px;
+
+  .order-inputs {
+    margin-bottom: 10px;
+  }
+
+  .order-checkouts {
+    margin-bottom: 16px;
+  }
+
+  .order-inputs {
+    .select-group {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .order-checkouts {
+    .checkout-item {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .order-form-divider {
+    background-color: #eaedef;
+    border: none;
+    height: 1px;
+    margin: 8px -15px 0;
+    padding: 0;
+  }
+
+  .order-summary {
+    @include flexbox(between);
+    margin-top: 16px;
+
+    dt {
+      @include text-style(14, $primary);
+      font-weight: 700;
+    }
+
+    strong,
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .order-coupon {
+    @include inline-flexbox(between);
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    box-shadow: rgba(63, 71, 77, 0.05) 0px 2px 5px;
+    font-size: 14px;
+    height: 44px;
+    line-height: 18px;
+    margin: 12px 0 0;
+    padding: 0 16px;
+    width: 100%;
+
+    &-download span,
+    .ic-download {
+      color: #f05656;
+      font-weight: 700;
+    }
+  }
+
+  .button-group {
+    @include flexbox;
+    margin-top: 20px;
+
+    button {
+      margin-right: 6px;
+      width: 50%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include responsive(D) {
+  }
+}
