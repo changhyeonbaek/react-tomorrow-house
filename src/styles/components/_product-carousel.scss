@@ -1,0 +1,115 @@
+.product-carousel {
+  position: relative;
+
+  .slick-list {
+    margin: 0 -#{$grid-margin};
+  }
+
+  .thumbnail-list {
+    @include pos-center-x;
+    bottom: 16px;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 4px;
+
+    &.slick-active {
+      button {
+        opacity: 1;
+        transform: scale(1.3333);
+      }
+    }
+
+    button {
+      background-color: $white;
+      border-radius: 50%;
+      height: 6px;
+      opacity: 0.7;
+      transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
+      width: 6px;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  @include responsive(T) {
+    padding-right: 30px;
+
+    .slick-list {
+      border-radius: 4px;
+      margin: 0 0 8px;
+      overflow: hidden;
+    }
+
+    .thumbnail-list {
+      position: static;
+      transform: none;
+    }
+
+    li {
+      margin: 0 8px 0 0;
+
+      &.slick-active {
+        button {
+          border: 2px solid $blue;
+          transform: none;
+        }
+      }
+
+      button {
+        @include flexbox;
+        border-radius: 4px;
+        height: 56px;
+        opacity: 1;
+        overflow: hidden;
+        width: 56px;
+      }
+
+      img {
+        display: block;
+        width: 56px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .slick-slider {
+      @include flexbox(end, start);
+      flex-direction: row-reverse;
+    }
+
+    .slick-list {
+      height: 500px;
+      width: 500px;
+    }
+
+    &-thumbnail {
+      margin-right: 8px;
+    }
+
+    .thumbnail-list {
+      margin-right: 8px;
+    }
+
+    li {
+      display: block;
+      margin-bottom: 8px;
+      margin-right: 0;
+
+      button,
+      img {
+        height: 75px;
+        width: 75px;
+      }
+    }
+  }
+}
