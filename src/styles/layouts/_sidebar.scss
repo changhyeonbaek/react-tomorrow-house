@@ -1,0 +1,126 @@
+.sidebar {
+  $sidebar-width: 270px;
+
+  @include no-scrollbar;
+  background-color: $white;
+  height: 100vh;
+  left: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 26px 16px;
+  position: fixed;
+  top: 0;
+  transform: translate3d(-#{$sidebar-width}, 0, 0);
+  transition: transform 300ms ease-in-out;
+  width: $sidebar-width;
+  z-index: $sidebar-level;
+
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &-header {
+    .logo {
+      @include flexbox(start);
+
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        height: 32px;
+        width: 79px;
+      }
+    }
+  }
+
+  &-user,
+  &-auth {
+    @include flexbox(start);
+    height: 20px;
+    margin: 24px 0 20px;
+  }
+
+  &-user {
+    a {
+      @include flexbox(start);
+      @include text-style(14, $dark);
+      width: 100%;
+
+      strong {
+        font-weight: 400;
+      }
+    }
+
+    .avatar-24 {
+      flex-grow: 0;
+      flex-shrink: 0;
+      height: 20px;
+      margin-right: 4px;
+      width: 20px;
+
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    .username {
+      @include truncate;
+      flex-grow: 1;
+    }
+  }
+
+  &-auth {
+    @include flexbox(between);
+
+    a {
+      width: 116px;
+    }
+  }
+
+  &-user-menu {
+    margin-top: 20px;
+
+    .user-menu-item {
+      margin: 4px 0 0;
+
+      a {
+        @include flexbox(start);
+        @include text-style(14, $primary);
+        height: 40px;
+        letter-spacing: -0.01rem;
+        padding: 0 12px;
+        width: 100%;
+
+        &:active {
+          color: $blue-aqua;
+        }
+
+        .ic-new {
+          color: #ff7777;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .user-menu-footer {
+      @include flexbox(start, center);
+      @include text-style(14, $dark);
+      padding: 0;
+
+      li {
+        padding: 6px;
+      }
+    }
+  }
+
+  &-divider {
+    background-color: #eaedef;
+    border: 0;
+    height: 1px;
+    margin: 20px 0;
+  }
+}
