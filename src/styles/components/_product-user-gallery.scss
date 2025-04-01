@@ -1,0 +1,12 @@
+.product-user-gallery {
+  .product-section {
+    &-content {
+      .ic-chevron {
+        display: inline-block;
+        font-weight: 700;
+        margin-left: 5px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
