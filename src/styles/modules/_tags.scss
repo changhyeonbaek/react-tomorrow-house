@@ -1,0 +1,32 @@
+%tag-base {
+  @include inline-flexbox;
+  @include text-style(11);
+  border-radius: 4px;
+  font-weight: 700;
+  height: 20;
+  padding: 4px;
+}
+
+.tag-red {
+  @extend %tag-base;
+  background-color: $red;
+  color: $white;
+}
+
+.tag-green {
+  @extend %tag-base;
+  background-color: $green;
+  color: $white;
+}
+
+.tag-gray {
+  @extend %tag-base;
+  background-color: $secondary;
+  color: $border;
+}
+
+.tag-beige {
+  @extend %tag-base;
+  background-color: #ededed;
+  color: $thirdly;
+}
