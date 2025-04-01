@@ -1,0 +1,170 @@
+.product-detail {
+  padding: 16px 0 0;
+
+  &-promotion {
+    @include flexbox(between);
+    @include text-style(14);
+    margin-bottom: 14px;
+
+    .promotion-title {
+      color: $thirdly;
+      flex-basis: auto;
+      width: 42px;
+    }
+
+    .promotion-content {
+      color: $dark-black;
+      flex-grow: 1;
+    }
+  }
+
+  &-delivery {
+    @include flexbox(between, start);
+    @include text-style(14);
+    border-bottom: 1px solid $border;
+    padding-bottom: 16px;
+
+    .delivery-title {
+      color: $thirdly;
+      flex-basis: auto;
+      width: 42px;
+    }
+
+    .delivery-content {
+      color: $dark-black;
+      flex-grow: 1;
+
+      .delivery-fee {
+        display: block;
+      }
+
+      .delivery-type {
+        display: block;
+      }
+
+      .delivery-disclaimer {
+        display: block;
+
+        .ic-check {
+          color: $secondary;
+          font-size: 12px;
+          padding: 5px;
+        }
+
+        span {
+          @include text-style(13, $secondary);
+        }
+      }
+
+      .delivery-expectation {
+        margin-top: 12px;
+
+        &-wrapper {
+          background-color: $light-gray;
+          border-radius: 4px;
+          display: block;
+        }
+
+        &-header {
+          @include flexbox(start);
+          padding: 8px 12px;
+
+          .ic-store {
+            flex-basis: auto;
+            flex-shrink: 0;
+            font-size: 20px;
+            margin-right: 4px;
+            padding: 5px;
+            width: 24px;
+          }
+
+          .text {
+            color: #292929;
+            display: block;
+            line-height: 20px;
+            margin-bottom: 3px;
+            width: 100%;
+
+            .date {
+              color: $blue-aqua;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .delivery-group {
+        display: inline-block;
+        margin-top: 8px;
+
+        &-button {
+          border: 1px solid $border;
+          border-radius: 4px;
+          display: inline-block;
+          font-size: 14px;
+          line-height: 17px;
+          padding: 6px 11px 7px 15px;
+
+          .ic-chevron {
+            display: inline-block;
+            margin-left: 7px;
+            transform: rotate(-90deg);
+            vertical-align: -1px;
+          }
+        }
+      }
+    }
+  }
+
+  &-brand {
+    @include flexbox(between);
+    padding: 14px 0;
+
+    .brand-info {
+      @include flexbox;
+
+      .ic-community {
+        color: $dark-black;
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 4px;
+      }
+
+      .brand-name {
+        span {
+          color: $primary;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 22px;
+          max-height: 44px;
+          overflow: hidden;
+          word-break: break-all;
+          word-wrap: break-word;
+        }
+      }
+    }
+
+    .brand-home-link {
+      @include flexbox(start);
+      background-color: $light-gray;
+      border-radius: 14px;
+      flex-basis: auto;
+      flex-shrink: 0;
+      padding: 4px 8px 4px 12px;
+
+      span {
+        @include text-style(13);
+        color: $thirdly;
+        font-weight: 700;
+        transform: translateY(-1px);
+      }
+
+      .ic-chevron {
+        display: inline-block;
+        margin-left: 4px;
+        transform: rotate(-90deg);
+        vertical-align: -1px;
+      }
+    }
+  }
+}
