@@ -1,0 +1,86 @@
+.product-tab {
+  background-color: $white;
+  border-bottom: 1px solid $border;
+  height: $product-tab-height-sm;
+  position: sticky;
+  top: $gnb-height-sm + $lnb-height-sm;
+  width: 100%;
+  z-index: $product-tab-level;
+
+  &-list {
+    @include flexbox;
+    list-style: none;
+    margin: 0 -#{$grid-margin};
+  }
+
+  &-item {
+    @include column-flexbox;
+    margin: 0 5px;
+    width: (100% / 5);
+
+    &.is-active {
+      button {
+        border-bottom-color: $blue-aqua;
+        color: $blue-aqua;
+      }
+    }
+
+    button {
+      @include column-flexbox;
+      @include text-style(13, $dark);
+      border-bottom: 2px solid transparent;
+      font-weight: 700;
+      height: 49px;
+      padding: 8px 0;
+      transition: color 0.3s, border-bottom-color 0.3s;
+      white-space: nowrap;
+      width: 100%;
+
+      &:active {
+        color: $blue-aqua;
+      }
+    }
+
+    .badge {
+      @include text-style(12, $fourthly);
+      font-weight: 400;
+    }
+  }
+
+  @include responsive(T) {
+    background-color: $background;
+    border-bottom: 0;
+    height: $product-tab-height-md;
+    margin: 40px 0;
+    top: $gnb-height-md + $lnb-height-md;
+
+    &-list {
+      margin: 0;
+      width: 66.6666%;
+    }
+
+    &-item {
+      button {
+        flex-direction: row;
+        @include text-style(15);
+        height: 54px;
+      }
+
+      .badge {
+        @include text-style(15);
+        font-weight: 700;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-list {
+      width: 100%;
+    }
+
+    &-item button:hover {
+      color: $blue;
+    }
+  }
+}
