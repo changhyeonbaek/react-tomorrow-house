@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import './styles/main.scss';
 import GlobalHeader from './components/GlobalHeader';
 import GlobalFooter from './components/GlobalFooter';
 import Sidebar from './components/Sidebar';
 import SearchModal from './components/SearchModal';
+import SignIn from './pages/SignIn';
 import useAuthStore from './store/authStore';
 
 function PublicRoute({ children }) {
@@ -58,6 +59,16 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route
+          path="/sign_in"
+          element={
+            <PublicRoute>
+              <AuthLayout>
+                <SignIn />
+              </AuthLayout>
+            </PublicRoute>
+          }
+        />
       </Routes>
       <div
         className={`overlay ${isModalOpen || isSidebarOpen ? 'is-active' : ''}`}
