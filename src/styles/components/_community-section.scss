@@ -1,0 +1,66 @@
+.community-section {
+  margin: 40px 0;
+
+  &-header {
+    @include flexbox(between);
+    padding: 20px 0;
+    width: 100%;
+
+    .title {
+      @include column-flexbox(center, start);
+
+      strong {
+        color: $charcoal;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+      }
+
+      span {
+        color: $charcoal;
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 4px;
+      }
+    }
+
+    .icon {
+      @include flexbox;
+      margin-left: 10px;
+
+      .ic-chevron {
+        color: $charcoal;
+        cursor: pointer;
+        font-size: 32px;
+        line-height: 1;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-header {
+      .icon {
+        @include flexbox;
+
+        .more-button {
+          @include text-style(16);
+          color: $blue-aqua;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-header {
+      .icon {
+        .more-button {
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
