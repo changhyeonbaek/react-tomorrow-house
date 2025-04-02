@@ -6,6 +6,7 @@ import GlobalFooter from './components/GlobalFooter';
 import Sidebar from './components/Sidebar';
 import SearchModal from './components/SearchModal';
 import Community from './pages/Community';
+import Shopping from './pages/Shopping';
 import SignIn from './pages/SignIn';
 import useAuthStore from './store/authStore';
 
@@ -98,6 +99,25 @@ function App() {
                 closeSearchModal={closeSearchModal}
               >
                 <Community openModal={openModal} />
+              </AppLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/shopping"
+          element={
+            <PrivateRoute>
+              <AppLayout
+                openSidebar={openSidebar}
+                openSearchModal={openSearchModal}
+                isSidebarOpen={isSidebarOpen}
+                isSearchModalOpen={isSearchModalOpen}
+                closeSearchModal={closeSearchModal}
+                openModal={openModal}
+                isModalOpen={isModalOpen}
+                closeModal={closeModal}
+              >
+                <Shopping openModal={openModal} />
               </AppLayout>
             </PrivateRoute>
           }
