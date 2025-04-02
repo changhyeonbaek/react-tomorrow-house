@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar';
 import SearchModal from './components/SearchModal';
 import Community from './pages/Community';
 import Shopping from './pages/Shopping';
+import Experts from './pages/Experts';
 import SignIn from './pages/SignIn';
 import useAuthStore from './store/authStore';
 
@@ -118,6 +119,22 @@ function App() {
                 closeModal={closeModal}
               >
                 <Shopping openModal={openModal} />
+              </AppLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/experts"
+          element={
+            <PrivateRoute>
+              <AppLayout
+                openSidebar={openSidebar}
+                openSearchModal={openSearchModal}
+                isSidebarOpen={isSidebarOpen}
+                isSearchModalOpen={isSearchModalOpen}
+                closeSearchModal={closeSearchModal}
+              >
+                <Experts openModal={openModal} />
               </AppLayout>
             </PrivateRoute>
           }
