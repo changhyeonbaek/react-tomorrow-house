@@ -1,0 +1,42 @@
+.bookmark-toast {
+  @include flexbox(between);
+  bottom: 8px;
+  left: 0;
+  padding-inline: 8px;
+  position: fixed;
+  width: 100%;
+  z-index: $bookmark-toast-level;
+
+  .bookmark-item {
+    @include flexbox;
+    background-color: rgb(47, 52, 56);
+    border-radius: 4px;
+    color: $white;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 15px;
+    padding: 14px 16px;
+    width: 100%;
+
+    .bookmark-title {
+      flex: 1 1 0%;
+      overflow-wrap: break-word;
+      word-break: keep-all;
+    }
+
+    .button-group {
+      margin-left: 4px;
+
+      .btn-list {
+        color: #35c5f0;
+        font-size: 14px;
+        line-height: 18px;
+        margin-right: 8px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
