@@ -1,0 +1,55 @@
+.order-form-modal {
+  background-color: $white;
+  border-radius: 16px 16px 0 0;
+  bottom: 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  display: none;
+  left: 0;
+  max-height: 75vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 20px 0 0;
+  position: fixed;
+  width: 100%;
+  z-index: $order-form-modal-level;
+
+  &.is-active {
+    display: block;
+    animation-duration: 200ms;
+    animation-name: modal-fade-in;
+  }
+
+  .order-coupon {
+    margin-bottom: 44px + (4px * 2) + 16px; //버튼 height + padding + margin
+  }
+
+  .button-group {
+    // background-color: $white;
+    bottom: 0;
+    left: 0;
+    padding: 0 4px 4px;
+    position: fixed;
+    width: 100%;
+
+    .btn-secondary,
+    .btn-primary {
+      font-size: 17px;
+    }
+
+    .btn-secondary {
+      background-color: #ededed;
+      color: $secondary;
+      line-height: 20px;
+    }
+  }
+}
+
+@keyframes modal-fade-in {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
