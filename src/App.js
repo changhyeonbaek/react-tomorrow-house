@@ -5,6 +5,7 @@ import GlobalHeader from './components/GlobalHeader';
 import GlobalFooter from './components/GlobalFooter';
 import Sidebar from './components/Sidebar';
 import SearchModal from './components/SearchModal';
+import Community from './pages/Community';
 import SignIn from './pages/SignIn';
 import useAuthStore from './store/authStore';
 
@@ -66,6 +67,22 @@ function App() {
               <AuthLayout>
                 <SignIn />
               </AuthLayout>
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <PublicRoute>
+              <AppLayout
+                openSidebar={openSidebar}
+                openSearchModal={openSearchModal}
+                isSidebarOpen={isSidebarOpen}
+                isSearchModalOpen={isSearchModalOpen}
+                closeSearchModal={closeSearchModal}
+              >
+                <Community openModal={openModal} />
+              </AppLayout>
             </PublicRoute>
           }
         />
