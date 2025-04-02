@@ -1,0 +1,82 @@
+[
+  {
+    "text": "전체",
+    "checked": true
+  },
+  {
+    "text": "가구",
+    "checked": false
+  },
+  {
+    "text": "패브릭",
+    "checked": false
+  },
+  {
+    "text": "가전·디지털",
+    "checked": false
+  },
+  {
+    "text": "주방용품",
+    "checked": false
+  },
+  {
+    "text": "식품",
+    "checked": false
+  },
+  {
+    "text": "데코·식물",
+    "checked": false
+  },
+  {
+    "text": "조명",
+    "checked": false
+  },
+  {
+    "text": "수납·정리",
+    "checked": false
+  },
+  {
+    "text": "생활용품",
+    "checked": false
+  },
+  {
+    "text": "생필품",
+    "checked": false
+  },
+  {
+    "text": "유아·아동",
+    "checked": false
+  },
+  {
+    "text": "반려동물",
+    "checked": false
+  },
+  {
+    "text": "캠핑·레저",
+    "checked": false
+  },
+  {
+    "text": "공구·DIY",
+    "checked": false
+  },
+  {
+    "text": "인테리어시공",
+    "checked": false
+  },
+  {
+    "text": "렌탈·구독",
+    "checked": false
+  },
+  {
+    "text": "장보기",
+    "checked": false
+  },
+  {
+    "text": "혼수·신혼",
+    "checked": false
+  },
+  {
+    "text": "Binary shop",
+    "checked": false
+  }
+]

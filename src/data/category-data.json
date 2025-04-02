@@ -1,0 +1,62 @@
+[
+  {
+    "title": "가구",
+    "image": "category-img-01"
+  },
+  {
+    "title": "패브릭",
+    "image": "category-img-02"
+  },
+  {
+    "title": "가전·디지털",
+    "image": "category-img-03"
+  },
+  {
+    "title": "주방용품",
+    "image": "category-img-04"
+  },
+  {
+    "title": "식품",
+    "image": "category-img-05"
+  },
+  {
+    "title": "데코·식물",
+    "image": "category-img-06"
+  },
+  {
+    "title": "조명",
+    "image": "category-img-07"
+  },
+  {
+    "title": "수납·정리",
+    "image": "category-img-08"
+  },
+  {
+    "title": "생활용품",
+    "image": "category-img-09"
+  },
+  {
+    "title": "생필품",
+    "image": "category-img-10"
+  },
+  {
+    "title": "유아·아동",
+    "image": "category-img-11"
+  },
+  {
+    "title": "장보기",
+    "image": "category-img-12"
+  },
+  {
+    "title": "혼수·신혼",
+    "image": "category-img-13"
+  },
+  {
+    "title": "캠핑·레저",
+    "image": "category-img-14"
+  },
+  {
+    "title": "인테리어시공",
+    "image": "category-img-15"
+  }
+]

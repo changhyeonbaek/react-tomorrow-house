@@ -1,0 +1,52 @@
+[
+  {
+    "name": "promotion-image-01",
+    "path": "../assets/images/promotion-image-01.png",
+    "title": "역대급세일"
+  },
+  {
+    "name": "promotion-image-02",
+    "path": "../assets/images/promotion-image-02.png",
+    "title": "오늘의딜"
+  },
+  {
+    "name": "promotion-image-03",
+    "path": "../assets/images/promotion-image-03.png",
+    "title": "집들이"
+  },
+  {
+    "name": "promotion-image-04",
+    "path": "../assets/images/promotion-image-04.png",
+    "title": "행운출첵"
+  },
+  {
+    "name": "promotion-image-05",
+    "path": "../assets/images/promotion-image-05.png",
+    "title": "살림살이"
+  },
+  {
+    "name": "promotion-image-06",
+    "path": "../assets/images/promotion-image-06.png",
+    "title": "취향의발견"
+  },
+  {
+    "name": "promotion-image-07",
+    "path": "../assets/images/promotion-image-07.png",
+    "title": "오마트"
+  },
+  {
+    "name": "promotion-image-08",
+    "path": "../assets/images/promotion-image-08.png",
+    "title": "빠른배송"
+  },
+  {
+    "name": "promotion-image-09",
+    "path": "../assets/images/promotion-image-09.png",
+    "title": "리모델링"
+  },
+  {
+    "name": "promotion-image-10",
+    "path": "../assets/images/promotion-image-10.png",
+    "title": "입주청소"
+  }
+]
