@@ -86,6 +86,22 @@ function App() {
             </PublicRoute>
           }
         />
+        <Route
+          path="/community"
+          element={
+            <PrivateRoute>
+              <AppLayout
+                openSidebar={openSidebar}
+                openSearchModal={openSearchModal}
+                isSidebarOpen={isSidebarOpen}
+                isSearchModalOpen={isSearchModalOpen}
+                closeSearchModal={closeSearchModal}
+              >
+                <Community openModal={openModal} />
+              </AppLayout>
+            </PrivateRoute>
+          }
+        />
       </Routes>
       <div
         className={`overlay ${isModalOpen || isSidebarOpen ? 'is-active' : ''}`}
