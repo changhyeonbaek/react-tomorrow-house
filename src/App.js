@@ -30,6 +30,10 @@ function AppLayout({ children, openSidebar, openSearchModal, isSidebarOpen, isSe
   );
 }
 
+function AuthLayout({ children }) {
+  return <div className="auth-container">{children}</div>;
+}
+
 function App() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
