@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Navigate, useLocation } from 'react-router-dom';
 import './styles/main.scss';
+import useAuthStore from './store/authStore';
 
 function PublicRoute({ children }) {
   return children;
+}
+
+function PrivateRoute({ children }) {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const location = useLocation();
+  console.log('PrivateRoute - isAuthenticated:', isAuthenticated);
+  return isAuthenticated ? children : <Navigate to="/sign_in" state={{ from: location }} replace />;
 }
 
 function App() {
@@ -26,7 +34,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* 아직 Route는 없음 */}
       </Routes>
       <div
         className={`overlay ${isModalOpen || isSidebarOpen ? 'is-active' : ''}`}
