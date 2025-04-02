@@ -1,5 +1,5 @@
 .community-section {
-  margin: 40px 0;
+  margin: 0 0 20px;
 
   &-header {
     @include flexbox(between);
@@ -39,6 +39,8 @@
   }
 
   @include responsive(T) {
+    margin: 40px 0;
+
     &-header {
       .icon {
         @include flexbox;
