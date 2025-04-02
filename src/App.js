@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Navigate, useLocation } from 'react-router-dom';
 import './styles/main.scss';
+import GlobalHeader from './components/GlobalHeader';
+import GlobalFooter from './components/GlobalFooter';
+import Sidebar from './components/Sidebar';
+import SearchModal from './components/SearchModal';
 import useAuthStore from './store/authStore';
 
 function PublicRoute({ children }) {
@@ -12,6 +16,18 @@ function PrivateRoute({ children }) {
   const location = useLocation();
   console.log('PrivateRoute - isAuthenticated:', isAuthenticated);
   return isAuthenticated ? children : <Navigate to="/sign_in" state={{ from: location }} replace />;
+}
+
+function AppLayout({ children, openSidebar, openSearchModal, isSidebarOpen, isSearchModalOpen, closeSearchModal, openModal, isModalOpen, closeModal }) {
+  return (
+    <>
+      <GlobalHeader openSidebar={openSidebar} openSearchModal={openSearchModal} />
+      {React.cloneElement(children, { openModal, isModalOpen, closeModal })}
+      <GlobalFooter />
+      <Sidebar isOpen={isSidebarOpen} />
+      <SearchModal isSearchModalOpen={isSearchModalOpen} closeSearchModal={closeSearchModal} />
+    </>
+  );
 }
 
 function App() {
