@@ -1,0 +1,127 @@
+.sign-in {
+  &-wrapper {
+    @include column-flexbox;
+    flex: 1 0 auto;
+    margin: 0 40px;
+    max-width: 300px;
+    padding: 40px 0;
+
+    .logo {
+      margin-bottom: 30px;
+
+      img {
+        height: 50px;
+        margin: 0 auto;
+        width: auto;
+      }
+    }
+
+    .form {
+      width: 300px;
+
+      &-field {
+        position: relative;
+
+        .sign-in-input {
+          background-color: $white;
+          border: 1px solid #dbdbdb;
+          display: block;
+          font-size: 15px;
+          line-height: 21px;
+          padding: 13px 15px 14px;
+          width: 100%;
+
+          &::placeholder {
+            color: rgba(0, 0, 0, 0.3);
+          }
+
+          &.email {
+            border-radius: 4px 4px 0 0;
+          }
+
+          &.password {
+            border-radius: 0 0 4px 4px;
+            margin-top: -1px;
+          }
+        }
+      }
+
+      .sign-in-submit {
+        @include inline-flexbox;
+        background-color: $blue-dark;
+        border-radius: 4px;
+        color: $white;
+        font-size: 17px;
+        font-weight: 700;
+        height: 52px;
+        margin: 20px 0;
+        padding: 15px 10px;
+        width: 100%;
+      }
+    }
+
+    .sign-in-links {
+      @include flexbox;
+      text-align: center;
+      width: 100%;
+
+      &-item {
+        @include text-style(12);
+
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .sign-in-social {
+      text-align: center;
+
+      &-title {
+        @include text-style(12);
+        color: rgb(117, 117, 117);
+        display: block;
+        margin: 35px 0 15px;
+      }
+
+      a {
+        margin: 0 10px;
+      }
+    }
+
+    .sign-in-cs {
+      @include text-style(14);
+      color: rgb(194, 200, 204);
+      margin: 24px 0 0;
+    }
+
+    .guest-order {
+      border-top: 1px solid rgb(219, 219, 219);
+      margin: 30px 0 0;
+      padding: 30px 0 0;
+      text-align: center;
+      width: 100%;
+
+      button {
+        @include text-style(15);
+        color: rgb(66, 66, 66);
+        width: 100%;
+      }
+
+      .divider {
+        margin: -3px;
+        overflow: hidden;
+        padding: 3px;
+      }
+    }
+  }
+
+  &-footer {
+    color: rgb(117, 117, 117);
+    font-size: 10px;
+    line-height: 20px;
+    margin: -5px 0 25px;
+    text-align: center;
+    width: 100%;
+  }
+}
