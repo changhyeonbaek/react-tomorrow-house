@@ -14,11 +14,21 @@ function App() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  const handleOverlayClick = () => {
+    closeSidebar();
+    closeModal();
+  };
+
   return (
     <Router>
       <Routes>
         {/* 아직 Route는 없음 */}
       </Routes>
+      <div
+        className={`overlay ${isModalOpen || isSidebarOpen ? 'is-active' : ''}`}
+        aria-hidden
+        onClick={handleOverlayClick}
+      />
     </Router>
   );
 }
