@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes } from 'react-router-dom';
 import './styles/main.scss';
 
+function PublicRoute({ children }) {
+  return children;
+}
+
 function App() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
