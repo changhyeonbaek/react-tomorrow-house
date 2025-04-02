@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Navigate, useLocation } from 'react-router-dom';
 import './styles/main.scss';
 import useAuthStore from './store/authStore';
@@ -30,6 +30,10 @@ function App() {
     closeSidebar();
     closeModal();
   };
+
+  useEffect(() => {
+    useAuthStore.getState().initializeAuth();
+  }, []);
 
   return (
     <Router>
