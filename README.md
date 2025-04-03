@@ -99,8 +99,8 @@ SCSS와 Styled-components를 조합해 모던하고 직관적인 UI를 완성했
 ---
 
 ## 🌐 배포
-- **배포 링크**: [[/projects/ohou-react](https://changhyeonbaek.github.io/react-tomorrow-house/)](#)  
-- **GitHub**: [https://github.com/changhyeonbaek/ohou-react](https://github.com/changhyeonbaek/ohou-react)
+- **배포 링크**: [[/projects/react-tomorrow-house](https://changhyeonbaek.github.io/react-tomorrow-house/)](#)  
+- **GitHub**: [https://github.com/changhyeonbaek/react-tomorrow-house](https://github.com/changhyeonbaek/ohou-react)
 
 ---
 
