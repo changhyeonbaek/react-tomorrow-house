@@ -43,7 +43,7 @@ SCSS와 Styled-components를 조합해 모던하고 직관적인 UI를 완성했
   - Zustand로 로그인 상태 실시간 관리  
   - Styled-components로 애니메이션 효과 적용  
 - **스크린샷**:  
-  ![Login Page](https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-3.png?raw=true)
+  ![Login Page](https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-6.png?raw=true)
 
 ### 3. 🛋 제품 상세 페이지
 - **기능**:  
