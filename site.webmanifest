@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "React Tomorrow House",
+    "short_name": "TomorrowHouse",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
