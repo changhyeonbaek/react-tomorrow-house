@@ -201,6 +201,7 @@ const GlobalHeader = ({ openSidebar, openSearchModal }) => {
                           className="gnb-icon-button is-search lg-hidden"
                           type="button"
                           aria-label="검색창 열기 버튼"
+                          onClick={openSearchModal}
                         >
                           <i className="ic-search"></i>
                         </button>
