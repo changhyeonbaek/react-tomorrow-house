@@ -1,70 +1,16 @@
-# Getting Started with Create React App
+React Tomorrow House
+인테리어 플랫폼 '오늘의집'을 클론한 React 기반 프로젝트입니다. 이 프로젝트는 React와 SCSS를 활용해 반응형 UI를 설계하며, Zustand로 사용자 인증 상태를 관리합니다. Firebase Authentication을 통해 이메일/비밀번호 로그인 기능을 구현했으며, 로그인 여부에 따라 접근 가능한 페이지를 분기 처리했습니다. 제품 데이터와 사용자 정보는 Firebase Firestore로 동적으로 관리됩니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+기술 스택
+React: 프론트엔드 UI 구축
+React Router: 페이지 라우팅
+Firebase: 인증(Authentication) 및 데이터베이스(Firestore)
+Zustand: 전역 상태 관리
+Styled-components: 동적 스타일링
+SCSS: 반응형 그리드 및 스타일 설계
+주요 기능
+사용자 인증: Firebase Authentication을 통한 이메일/비밀번호 로그인 및 로그아웃
+반응형 UI: SCSS와 Styled-components를 활용한 모바일 및 데스크톱 호환 디자인
+동적 데이터 관리: Firebase Firestore를 사용한 제품 데이터 및 사용자 정보 실시간 관리
+페이지 분기: 로그인 상태에 따른 접근 제어
+상세 페이지: 제품 상세 정보 표시
